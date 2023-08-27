@@ -93,50 +93,73 @@ const MySkillsPage = () => {
 <ParticleComponent theme='light' />
             <Main>
 <Title>
-    <Design width={40} height={40} /> Designer
+    <Design width={40} height={40} /> Software Developer
 </Title>
 <Description>
-I love to create design which speaks, Keep it clean, minimal and simple.
+
 </Description>
 <Description>
-<strong>I like to Design</strong>
+
 <ul>
     <li>
-        Web Design
+    <b>Programming Languages</b>: C, C++, Python.
+
     </li>
     <li>
-        Mobile Apps
+  <b>Technologies</b>  : Git, GitHub, VS Code, Linux.
+       
     </li>
 </ul>
 </Description>
 <Description>
-<strong>Tools</strong>
-<ul>
-    <li>
-       Figma
-    </li>
-    
-</ul>
+
 </Description>
 
             </Main>
             <Main>
 <Title>
-    <Develope width={40} height={40} /> Frontend Developer
+    <Develope width={40} height={40} /> Full Stack Developer
 </Title>
 <Description>
-I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+<ul>
+    <li>
+   <b> Web Technologies</b>: HTML, CSS, JavaScript, Node.js, EJS.
+    </li>
+    <li>
+    <b> Frameworks</b>: Express.js, React.js, React Native.
+    </li>
+    <li>
+    <b> Databases</b>: MongoDB, MySQL, Firebase.
+    </li>
+    <li>
+    <b> Tools</b>: Heroku, Netlify, Firebase, Postman.
+    </li>
+    <li>
+    <b> Cloud Services</b>: AWS, Google Cloud Platform.
+    </li>
+    <li>
+    <b> Web Scraping</b>: Puppeteer, request.
+    </li>
+
+</ul>
+
+<br></br>
+
+
+
 </Description>
 <Description>
-<strong>Skills</strong>
+{/* <strong>Skills</strong> */}
+
+
 <p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
+
 </p>
 </Description>
 <Description>
-<strong>Tools</strong>
+
 <p>
-VScode, Github, Codepen etc.
+
 </p>
 </Description>
 

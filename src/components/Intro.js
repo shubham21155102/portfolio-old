@@ -81,7 +81,11 @@ const Intro = () => {
                 <Text>
                     <h1>Hi,</h1>
                     <h3>I'm Shubham.</h3>
-                    <h6>I write scripts for data extraction</h6>
+                    <h6>
+
+ and I'm enthusiastic about exploring the world of technology and engineering. Let me take you through some of the key aspects of my academic journey, skills, and projects:
+
+</h6>
                 </Text>
             </SubBox>
             <SubBox>
