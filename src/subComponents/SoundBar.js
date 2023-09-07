@@ -1,8 +1,13 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState,useEffect } from 'react'
 import styled, { keyframes } from 'styled-components'
-
-import music from "../assets/audio/u-said-it-v13-1167.mp3"
-
+const musicLists = [
+    'har-har-shambhu-57428-57444.mp3',
+    'BTS-Dynamite-Ringtone-2023-Download-dmr.mp3',
+    'Bones - Imagine Dragon ringtone download.mp3',
+    'Calm Down Instrumental Ringtonebaaz.mp3',
+    'Suzume No Tojimari Ringtonebaaz.mp3',
+    'Thatanimemom Song Download Mp3 Ringtonebaaz.mp3'
+  ];
 const Box = styled.div`
 display:flex;
 cursor:pointer;
@@ -54,16 +59,29 @@ const SoundBar = () => {
 
     const ref = useRef(null);
     const [click, setClick] = useState(false);
-
+    const [musicSrc, setMusicSrc] = useState(null);
+  
     const handleClick = () => {
-        setClick(!click);
-
-        if(!click){
-            ref.current.play();
-        }else{
-            ref.current.pause();
-        }
-    }
+      setClick(!click);
+  
+      if (!click) {
+        ref.current.play();
+      } else {
+        ref.current.pause();
+      }
+    };
+  
+    useEffect(() => {
+      const randomIndex = Math.floor(Math.random() * musicLists.length);
+      console.log(randomIndex)
+      import(`../assets/audio/${musicLists[randomIndex]}`)
+        .then((module) => {
+          setMusicSrc(module.default);
+        })
+        .catch((error) => {
+          console.error('Error importing audio file:', error);
+        });
+    }, []);
     return (
         <Box onClick={() => handleClick()}>
             <Line click={click}/>
@@ -73,7 +91,7 @@ const SoundBar = () => {
             <Line click={click}/>
 
 
-            <audio src={music} ref={ref}  loop />
+            <audio src={musicSrc} ref={ref} loop />
         </Box>
     )
 }
